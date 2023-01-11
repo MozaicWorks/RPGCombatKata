@@ -4,7 +4,7 @@ init:
 	pipenv install
 
 test: 
-	pipenv run python -m unittest 
+	pipenv run pytest --no-header --tb=no --quiet tests/
 
 run:
 	pipenv run python RPGCombat/RPGCombat.py
