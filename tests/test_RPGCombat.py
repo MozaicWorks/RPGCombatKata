@@ -10,14 +10,15 @@ class TestRPGCombat:
 
     def test_character_is_damaged(self):
         arthur = Character()
-        arthur.takeDamage(10)
 
-        self.assertAlive(arthur, 990)
+        arthur.takeDamage(100)
+
+        self.assertAlive(arthur, 900)
 
     def test_character_dies_from_damage(self):
         arthur = Character()
 
-        arthur.takeDamage(1001)
+        arthur.takeDamage(Character.MAX_HEALTH)
 
         self.assertDead(arthur)
 
@@ -39,9 +40,9 @@ class TestRPGCombat:
 
     def test_cannot_heal_dead_character(self):
         arthur = Character()
-        arthur.takeDamage(1010)
+        arthur.takeDamage(Character.MAX_HEALTH)
 
-        arthur.heal(1000)
+        arthur.heal(Character.MAX_HEALTH)
 
         self.assertDead(arthur)
 
@@ -54,4 +55,4 @@ class TestRPGCombat:
         assert character.isAlive()
 
     def assertFullHealth(self, character):
-        return self.assertAlive(character, 1000)
+        return self.assertAlive(character, Character.MAX_HEALTH)

@@ -37,7 +37,8 @@ class BoundedInt:
 
 @dataclass
 class Character:
-    health = BoundedInt(0, 1000, 1000)
+    MAX_HEALTH = 1000
+    health = BoundedInt(0, MAX_HEALTH, MAX_HEALTH)
     level = 1
 
     def isAlive(self):
