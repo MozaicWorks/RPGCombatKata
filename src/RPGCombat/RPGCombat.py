@@ -9,3 +9,4 @@ from dataclasses import dataclass
 class Character:
     health = 1000
     level = 1
+    alive = True
