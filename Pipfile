@@ -7,6 +7,12 @@ name = "pypi"
 pytest = "*"
 
 [dev-packages]
+neovim = "*"
+jedi = "*"
+pynvim = "*"
+pylint = "*"
+pytest-watcher = "*"
+parameterized = "*"
 
 [requires]
 python_version = "3.10"
