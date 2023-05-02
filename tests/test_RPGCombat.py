@@ -1,23 +1,57 @@
 from RPGCombat.Character import Character
 
 class TestRPGCombat:
-    def test_new_character_is_alive_has_1000_health_and_level_1(self):
+
+    def test_new_character_is_alive_has_full_health_and_level_1(self):
         arthur = Character()
 
-        assert arthur.health == 1000
+        self.assertFullHealth(arthur)
         assert arthur.level == 1
-        assert arthur.alive
 
     def test_character_is_damaged(self):
         arthur = Character()
         arthur.takeDamage(10)
 
-        assert arthur.health == 990
+        self.assertAlive(arthur, 990)
 
     def test_character_dies_from_damage(self):
         arthur = Character()
 
         arthur.takeDamage(1001)
 
-        assert arthur.health == 0
-        assert not arthur.alive
+        self.assertDead(arthur)
+
+    def test_character_is_healed(self):
+        arthur = Character()
+        arthur.takeDamage(50)
+
+        arthur.heal(40)
+
+        self.assertAlive(arthur, 990)
+
+    def test_character_is_healed_to_full(self):
+        arthur = Character()
+        arthur.takeDamage(50)
+
+        arthur.heal(51)
+
+        self.assertFullHealth(arthur)
+
+    def test_cannot_heal_dead_character(self):
+        arthur = Character()
+        arthur.takeDamage(1010)
+
+        arthur.heal(1000)
+
+        self.assertDead(arthur)
+
+    def assertDead(self, character):
+        assert character.health == 0
+        assert not character.isAlive()
+
+    def assertAlive(self, character, expectedHealth):
+        assert character.health == expectedHealth
+        assert character.isAlive()
+
+    def assertFullHealth(self, character):
+        return self.assertAlive(character, 1000)
