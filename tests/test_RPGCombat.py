@@ -46,6 +46,42 @@ class TestRPGCombat:
 
         self.assertDead(arthur)
 
+    def test_deal_damage_to_another_character(self):
+        arthur = Character()
+        merlin = Character()
+
+        arthur.dealDamageTo(merlin, 10)
+
+        self.assertAlive(merlin, 990)
+
+    def test_cannot_deal_self_damage(self):
+        arthur = Character()
+
+        arthur.dealDamageTo(arthur, 10)
+
+        self.assertFullHealth(arthur)
+
+    def test_deal_damage_to_lower_level(self):
+        arthur = Character()
+        arthur.level = 6
+        novice = Character()
+
+        arthur.dealDamageTo(novice, 10)
+
+        self.assertFullHealth(arthur)
+        self.assertAlive(novice, 985)
+
+    def test_deal_damage_to_higher_level(self):
+        arthur = Character()
+        arthur.level = 6
+        novice = Character()
+
+        novice.dealDamageTo(arthur, 10)
+
+        self.assertFullHealth(novice)
+        self.assertAlive(arthur, 995)
+
+
     def assertDead(self, character):
         assert character.health == 0
         assert not character.isAlive()

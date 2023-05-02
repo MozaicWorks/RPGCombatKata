@@ -50,3 +50,15 @@ class Character:
     def heal(self, healing):
         if self.isAlive():
             self.health += healing
+
+    def dealDamageTo(self, character, damage):
+        if character is self:
+            return
+
+        if (self.level - character.level) >=5:
+            damage = 1.5*damage
+
+        if(character.level - self.level) >= 5:
+            damage = damage/2
+
+        character.takeDamage(damage)
