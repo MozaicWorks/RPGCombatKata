@@ -58,14 +58,13 @@ coverage-report: $(COVERAGE)
 
 CURRENT_FOLDER := $(shell pwd)
 INCLUDE := "$(CURRENT_FOLDER)/src/*"
-#EXCLUDE := "$(CURRENT_FOLDER)/src/libs/*"
-EXCLUDE := ""
+EXCLUDE := "$(CURRENT_FOLDER)/src/libs/*"
 COVERAGE_FULL_PATH := "$(CURRENT_FOLDER)/$(COVERAGE)"
 
 $(COVERAGE): coverage
 	@mkdir -p $(COVERAGE) 
-	@lcov --capture --quiet --directory $(BLD_TEST) --include $(INCLUDE) --exclude $(EXCLUDE) --ignore-errors unused --output-file "$(COVERAGE_FULL_PATH)/coverage.info"
-	@genhtml --ignore-errors empty $(COVERAGE)/coverage.info --output-directory $(COVERAGE)
+	@lcov --capture --quiet --directory $(BLD_TEST) --include $(INCLUDE) --output-file "$(COVERAGE_FULL_PATH)/coverage.info"
+	@genhtml $(COVERAGE)/coverage.info --output-directory $(COVERAGE)
 	rm *.gcov
 
 open-coverage-report: coverage-report 
