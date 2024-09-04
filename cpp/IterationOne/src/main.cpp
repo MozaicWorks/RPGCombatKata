@@ -32,12 +32,12 @@ int damage(){
 	else if(roll == 20){
 		isCriticalMiss = false;
 		isCriticalHit = true;
-		damage = 10 * roll;
+		damage = 30 * roll;
 	}
 	else {
 		isCriticalMiss = false;
 		isCriticalHit = false;
-		damage = 5 * roll;
+		damage = 15 * roll;
 	}
 	return damage;
 }
@@ -70,7 +70,7 @@ int main(){
 		if(isCriticalHit) {
 			cout << "Mordred did a critical hit! ";
 		}
-		cout << "Mordred dealt " << arthurDamage << " to Arthur and Arthur has " << arthur.health() << " health left" << endl;
+		cout << "Mordred dealt " << mordredDamage << " damage to Arthur and Arthur has " << arthur.health() << " health left" << endl;
 		if(!arthur.isAlive()){
 			cout << "Arthur is dead! " << endl;
 			break;
