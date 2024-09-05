@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGCombatKata", "RPGCombatKata\RPGCombatKata.csproj", "{D14A5C4C-B28F-4267-8279-FABA23F0D7B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGCombatKata.Tests", "RPGCombatKata.Tests\RPGCombatKata.Tests.csproj", "{0A6741F5-C49A-47B3-9DFF-AAEB795BB69B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D14A5C4C-B28F-4267-8279-FABA23F0D7B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D14A5C4C-B28F-4267-8279-FABA23F0D7B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D14A5C4C-B28F-4267-8279-FABA23F0D7B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D14A5C4C-B28F-4267-8279-FABA23F0D7B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A6741F5-C49A-47B3-9DFF-AAEB795BB69B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A6741F5-C49A-47B3-9DFF-AAEB795BB69B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A6741F5-C49A-47B3-9DFF-AAEB795BB69B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A6741F5-C49A-47B3-9DFF-AAEB795BB69B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
