@@ -1,15 +1,5 @@
 # Status
 
-## C# 
-
-- [x] Iteration One
-- [ ] Iteration One Prime
-- [ ] Iteration Two 
-- [ ] Iteration Three 
-- [ ] Iteration Four 
-- [ ] Iteration Five 
-
-
 ## Cpp 
 
 - [x] Iteration One
@@ -19,6 +9,14 @@
 - [ ] Iteration Four 
 - [ ] Iteration Five 
 
+## C# 
+
+- [x] Iteration One
+- [ ] Iteration One Prime
+- [ ] Iteration Two 
+- [ ] Iteration Three 
+- [ ] Iteration Four 
+- [ ] Iteration Five 
 
 ## Python
 
