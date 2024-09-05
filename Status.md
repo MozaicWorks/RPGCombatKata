@@ -2,7 +2,8 @@
 
 ## C# 
 
-- [ ] Iteration One
+- [x] Iteration One
+- [ ] Iteration One Prime
 - [ ] Iteration Two 
 - [ ] Iteration Three 
 - [ ] Iteration Four 
@@ -12,6 +13,7 @@
 ## Cpp 
 
 - [x] Iteration One
+- [x] Iteration One Prime
 - [ ] Iteration Two 
 - [ ] Iteration Three 
 - [ ] Iteration Four 
@@ -36,5 +38,13 @@
 - [x] Dead characters cannot be healed
 - [x] Healing cannot raise health above 1000
 
+### Iteration One Prime
 
+This is out of scope of the initial exercise, but I added a few things:
+
+- [x] Damage depends on a D20 dice
+- [x] Normal damage is 15 times the dice roll
+- [x] Critical hit damage (dice roll 20) is double the normal
+- [x] Critical miss damage (dice roll 1) is 0
+- [x] Additional effects can be triggered by critical hit and critical miss so make the info available 
 
