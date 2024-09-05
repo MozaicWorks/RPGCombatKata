@@ -1,7 +1,6 @@
 #include "DamageCalculator.h"
 
 DamageResult DamageCalculator::computeDamage() const {
-	Dice20Faces d20;
 	int roll = d20.roll();
 
 	if(roll == 1) {

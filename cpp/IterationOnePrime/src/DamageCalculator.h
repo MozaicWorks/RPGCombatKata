@@ -9,10 +9,10 @@ struct DamageResult{
 
 class DamageCalculator{
 	private:
-		const Dice20Faces& d20;
+		const Dice& d20;
 
 	public:
-		DamageCalculator(const Dice20Faces& d20) : d20(d20){}
+		DamageCalculator(const Dice& d20) : d20(d20){}
 
 		DamageResult computeDamage() const;
 };
