@@ -14,7 +14,7 @@ int Character::level() const{
 	return myLevel;
 }
 
-void Character::dealDamage(Character& defender, int damage){
+void Character::dealDamage(Character& defender, int damage) const {
 	if(defender.health() < damage){
 		defender.alive = false;
 		defender.myHealth = 0;

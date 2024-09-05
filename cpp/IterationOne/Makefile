@@ -18,7 +18,7 @@ CLI_OBJS := $(CLI_SRCS:%.cpp=$(BLD_PROD)/%.o)
 # Tests Production Variables
 TEST_PATHS := $(shell find tests -type d -printf 'tests/%P:')
 # Find all test files from the 'tests' folder, in the form test_*.cpp
-TEST_SRCS := $(SRCS) $(shell find tests -name 'test_*.cpp' -printf '%f ')
+TEST_SRCS := $(SRCS) $(shell find tests -name '*.cpp' -printf '%f ')
 TESTS := $(OUT)/combatTests
 BLD_TEST := $(BUILD)/test
 TEST_OBJS := $(TEST_SRCS:%.cpp=$(BLD_TEST)/%.o)

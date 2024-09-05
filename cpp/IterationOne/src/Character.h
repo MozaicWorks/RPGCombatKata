@@ -10,6 +10,6 @@ class Character{
 		int health() const;
 		int isAlive() const;
 		int level() const;
-		void dealDamage(Character& defender, int damage);
+		void dealDamage(Character& defender, int damage) const;
 		void heal(Character& patient, int healing);
 };
