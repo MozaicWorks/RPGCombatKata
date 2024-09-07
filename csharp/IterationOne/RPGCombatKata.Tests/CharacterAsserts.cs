@@ -6,11 +6,18 @@ namespace RPGCombatKata.Tests
 	public class CharacterAsserts
 	{
 		private readonly Character character;
+		private readonly string situation = "";
 
 		public CharacterAsserts(Character character)
 		{
 			this.character = character;
 		}
+		public CharacterAsserts(Character character, string situation)
+		{
+			this.character = character;
+			this.situation = situation;
+		}
+
 
 		public void HasFullHealth()
 		{
@@ -21,6 +28,13 @@ namespace RPGCombatKata.Tests
 		{
 			Assert.True(character.IsAlive());
 		}
+
+		public void IsAliveWithHealth(int health)
+		{
+			IsAlive();
+			HasHealth(health);
+		}
+
 
 		public void IsAliveAtFullHealth()
 		{
